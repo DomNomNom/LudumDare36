@@ -1,0 +1,52 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/objects.css">
+  <!-- <link rel="stylesheet" href="css/custom-slate.css"> -->
+  <!-- <link rel="stylesheet" href="css/minimal-slate.css"> -->
+  <!-- <meta http-equiv="Refresh" content="5"> -->
+</head>
+<body>
+
+  <div id="templates">
+    <div class="command">
+      <h1>I'm an command.</h1>
+    </div>
+    <div class="floor">
+      <!-- <div class="text">.</div> -->
+    </div>
+    <div class="finish">     <div class="text">X</div>    </div>
+    <div class="human">      <div class="text">@</div>    </div>
+    <div class="wormhole">   <div class="text">*</div>    </div>
+  </div>
+
+  <div id='game-resolution'>
+
+
+
+
+    <div id="world-view">
+      <div id="view-header">
+        <h1>[APPLIED META CAUSALITY]</h1>
+      </div>
+
+     <div id="map"></div>
+      <div id="action-bar">
+       <button type="button" onclick="pushCommand('move -1 0')">&lt;--</button>
+       <button type="button" onclick="pushCommand('move +1 0')">--&gt;</button>
+      </div>
+
+    </div>
+
+
+    <div id="sidebar">
+      <h2>History: </h2>
+      <div id="command-list"></div>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/draw.js"></script>
+</body>
+</html>

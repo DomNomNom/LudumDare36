@@ -1,0 +1,22 @@
+
+.floor {
+    border: 1px solid black;
+}
+
+.text {
+    text-align: center;  /* horizontal */
+
+    /* vertical */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#map > * {
+  position: absolute;
+  width: 10;
+}
+
+#map {
+    font-size: 20;
+}
