@@ -5,15 +5,15 @@ body {
   font-family: monospace;
 }
 #game-resolution {
-  background: #5a5a5a;
+  background: #272b30;
   position: absolute;
 
   width: 900px;
   height: 600px;
-  top: 50%;
-  left: 50%;
   margin-left: -450px; /* half of width/height */
   margin-top: -300px;
+  top: 50%;
+  left: 50%;
 }
 
 
@@ -28,7 +28,7 @@ body {
   overflow: auto;
 }
 #world-view #view-header {
-  height: 25%;
+  height: 15%;
   width: 100%;
   overflow: auto;
   text-align: center;
@@ -40,14 +40,40 @@ body {
 #world-view > div {
   margin: 10px;
 }*/
-#world-view #map {
+#world-view #map-container {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+#world-view #map-container .well {
   position: relative;
-  height: 50%;
+  flex-grow: 1;
+  margin: 10px;
+  background-color: #1c1e22;
+  border: 1px solid #0c0d0e;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 #world-view #action-bar {
   height: 25%;
 }
+#action-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+#action-bar .action-button {
+  flex-grow: 1;
 
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
 
 
 #sidebar {
@@ -56,7 +82,6 @@ body {
   right: 0;
   height: 100%;
 
-  background: #555;
   position: absolute;
   border-left: 1px dotted black;
 
@@ -65,12 +90,20 @@ body {
 }
 #sidebar > * {
   margin: 10px;
+  margin-top: 32px;
 }
 #sidebar #command-list {
-  text-transform: uppercase;
-  /*position: absolute;*/
-  /*height: 100%;*/
+  /*text-transform: uppercase;*/
+  overflow-wrap: all;
 
   flex-grow: 1;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#sidebar .command {
+  white-space: nowrap;
+  /*text-overflow: ellipsis;*/
+  /*overflow-x: hidden;*/
+}
+.popover{
 }

@@ -1,8 +1,8 @@
 <html>
 <head>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/objects.css">
-  <!-- <link rel="stylesheet" href="css/custom-slate.css"> -->
+  <link rel="stylesheet" href="css/custom-slate.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="css/minimal-slate.css"> -->
   <!-- <meta http-equiv="Refresh" content="5"> -->
 </head>
@@ -15,9 +15,17 @@
     <div class="floor">
       <!-- <div class="text">.</div> -->
     </div>
-    <div class="finish">     <div class="text">X</div>    </div>
-    <div class="human">      <div class="text">@</div>    </div>
+    <!--  data-placement="top" title="omg" data-original-title="Tooltip on top" -->
+    <div class="finish">     <div class="text">...</div>  </div>
+    <div class="human" >      <div class="text">X</div>   </div>
+    <div class="chrobar">    <div class="text">C</div>    </div>
     <div class="wormhole">   <div class="text">*</div>    </div>
+
+    <div class="invisible">    <div class="text"></div>    </div>
+    <div class="vase">    <div class="text">V</div>    </div>
+
+
+    <div class="action-button btn"><div class="action-text"></div></div>
   </div>
 
   <div id='game-resolution'>
@@ -30,12 +38,13 @@
         <h1>[APPLIED META CAUSALITY]</h1>
       </div>
 
-     <div id="map"></div>
-      <div id="action-bar">
-       <button type="button" onclick="pushCommand('move -1 0')">&lt;--</button>
-       <button type="button" onclick="pushCommand('move +1 0')">--&gt;</button>
+      <div id="map-container">
+        <div class="well">
+          <div id="map"></div>
+        </div>
       </div>
 
+      <div id="action-bar"></div>
     </div>
 
 
@@ -46,7 +55,10 @@
   </div>
 
   <script src="js/jquery.js"></script>
-  <script src="js/game.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/commands.js"></script>
+  <script src="js/levels.js"></script>
   <script src="js/draw.js"></script>
+  <script src="js/game.js"></script>
 </body>
 </html>
